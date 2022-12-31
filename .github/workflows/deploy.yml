@@ -10,7 +10,7 @@ jobs:
      steps:
         - uses: actions/checkout@v2 
         - run : docker build -t ayush4web/react-docker -f Dockerfile .
-        - run : docker run -e CI=true ayush4web/react-docker npm test    
+        - run : docker run ayush4web/react-docker npm run test    
 
         
  
