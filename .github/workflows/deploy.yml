@@ -1,0 +1,16 @@
+name: Deploy Frontend
+on : 
+  push:
+    brances:
+      - master
+
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+        - uses: actions/checkout@v2 
+        - run : docker build -t ayush4web/react-docker -f Dockerfile .
+        - run : docker run -e CI=true ayush4web/react-docker npm test    
+
+        
+ 
