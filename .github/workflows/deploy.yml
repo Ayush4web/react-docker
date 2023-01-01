@@ -1,7 +1,7 @@
 name: Deploy Frontend
 on : 
   push:
-    brances:
+    branches:
       - master
 
 jobs:
@@ -9,7 +9,9 @@ jobs:
      runs-on: ubuntu-latest
      steps:
         - uses: actions/checkout@v2 
-        - run : echo "Hello actions"
+
+        - name: testing actions  
+          run : echo "Hello actions"
   
 
         
