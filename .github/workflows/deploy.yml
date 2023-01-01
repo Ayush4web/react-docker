@@ -1,7 +1,7 @@
 name: Deploy Frontend
 on : 
   push:
-    brances:
+    branches:
       - master
 
 jobs:
